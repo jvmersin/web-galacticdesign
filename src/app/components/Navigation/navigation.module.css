@@ -1,5 +1,5 @@
 .navigationBar {
     display: grid;
-    padding: 20px 0;
-    grid-template-columns: 200px 1fr 200px;
+    padding: 10px 0;
+    grid-template-columns: 300px 1fr 300px;
 }

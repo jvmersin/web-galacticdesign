@@ -8,46 +8,55 @@ export default function Navigation() {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
       >
-        <Typography>Galactic Design</Typography>
+        <img
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100px",
+          }}
+          src="https://cdn.galacticdesign.io/images/logo/logo.svg"
+          alt="Minimilast Planet"
+        />
+        <Typography variant="h5" fontWeight="bold" whiteSpace="nowrap">
+          Galactic Design
+        </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Button
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-          component={Link}
           href="/"
-          color="secondary"
+          component={Link}
+          sx={{ padding: "0 35px", fontWeight: "bold" }}
         >
           Home
         </Button>
         <Button
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-          component={Link}
           href="/about"
-          color="secondary"
+          component={Link}
+          sx={{ padding: "0 35px", fontWeight: "bold" }}
         >
           About
         </Button>
         <Button
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-          component={Link}
           href="/portfolio"
-          color="secondary"
+          component={Link}
+          sx={{ padding: "0 35px", fontWeight: "bold" }}
         >
           Portfolio
         </Button>
         <Button
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-          component={Link}
           href="/contact"
-          color="secondary"
+          component={Link}
+          sx={{ padding: "0 35px", fontWeight: "bold" }}
         >
           Contact
         </Button>
@@ -58,7 +67,7 @@ export default function Navigation() {
           justifyContent: "center",
         }}
       >
-        <Button>Pay Invoice</Button>
+        <Button sx={{ fontWeight: "bold" }}>Pay Invoice</Button>
       </Box>
     </Box>
   );

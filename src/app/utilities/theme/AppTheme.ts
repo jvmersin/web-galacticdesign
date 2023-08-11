@@ -38,8 +38,8 @@ const AppTheme = (themeType: string) =>
     },
     palette: {
       mode: themeType,
-      primary: { main: "#C8B1D9" },
-      secondary: { main: "#A6768F" },
+      primary: { main: "#7e57c2" },
+      secondary: { main: "#64b5f6" },
       twitch: { main: "#6441A5" },
       linkedIn: { main: "#0077B5" },
       twitter: { main: "#38A1F3" },
