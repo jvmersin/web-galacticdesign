@@ -1,14 +1,15 @@
 import { ThemeOptions } from "@mui/material";
-import { Roboto } from "next/font/google";
+import { Rationale } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["400", "700", "900"],
+const rationale = Rationale({
+  weight: ["400"],
   subsets: ["latin"],
   display: "swap",
 });
 
 declare module "@mui/material/styles" {
   interface Palette {
+    tertiary: Palette["primary"];
     twitch: Palette["primary"];
     linkedIn: Palette["primary"];
     twitter: Palette["primary"];
@@ -20,6 +21,7 @@ declare module "@mui/material/styles" {
   }
 
   interface PaletteOptions {
+    tertiary: PaletteOptions["primary"];
     twitch: PaletteOptions["primary"];
     linkedIn: PaletteOptions["primary"];
     twitter: PaletteOptions["primary"];
@@ -31,15 +33,30 @@ declare module "@mui/material/styles" {
   }
 }
 
+declare module "@mui/material/Button" {
+  interface ButtonPropsColorOverrides {
+    tertiary: true;
+  }
+}
+
 const AppTheme = (themeType: string) =>
   ({
     typography: {
-      fontFamily: roboto.style.fontFamily,
+      fontSize: 16,
+      fontFamily: rationale.style.fontFamily,
     },
     palette: {
       mode: themeType,
-      primary: { main: "#7e57c2" },
-      secondary: { main: "#64b5f6" },
+      background: {
+        default: "#1B2735",
+        paper: "#1B2735",
+      },
+      primary: { main: "#673ab7" },
+      secondary: { main: "#00b0ff" },
+      tertiary: {
+        main: "#ffea00",
+        contrastText: "#121212",
+      },
       twitch: { main: "#6441A5" },
       linkedIn: { main: "#0077B5" },
       twitter: { main: "#38A1F3" },

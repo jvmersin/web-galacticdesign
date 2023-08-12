@@ -1,74 +1,22 @@
-import Link from "next/link";
-import { Box, Button, Typography } from "@mui/material";
-import styles from "@/app/components/Navigation/navigation.module.css";
+"use client";
+import React, { useState } from "react";
+import { Box, useMediaQuery } from "@mui/material";
+import DesktopNavigation from "@/app/components/Navigation/DesktopNavigation";
+import MobileNavigation from "@/app/components/Navigation/MobileNavigation";
+import NavigationDrawer from "@/app/components/Navigation/NavigationDrawer";
 
 export default function Navigation() {
+  const isDesktop: boolean = useMediaQuery("(min-width: 1200px)");
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+
   return (
-    <Box className={styles.navigationBar}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <img
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100px",
-          }}
-          src="https://cdn.galacticdesign.io/images/logo/logo.svg"
-          alt="Minimilast Planet"
-        />
-        <Typography variant="h5" fontWeight="bold" whiteSpace="nowrap">
-          Galactic Design
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Button
-          href="/"
-          component={Link}
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-        >
-          Home
-        </Button>
-        <Button
-          href="/about"
-          component={Link}
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-        >
-          About
-        </Button>
-        <Button
-          href="/portfolio"
-          component={Link}
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-        >
-          Portfolio
-        </Button>
-        <Button
-          href="/contact"
-          component={Link}
-          sx={{ padding: "0 35px", fontWeight: "bold" }}
-        >
-          Contact
-        </Button>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Button sx={{ fontWeight: "bold" }}>Pay Invoice</Button>
-      </Box>
+    <Box>
+      {!isDesktop ? (
+        <MobileNavigation handleOpen={setDrawerOpen} />
+      ) : (
+        <DesktopNavigation />
+      )}
+      <NavigationDrawer open={drawerOpen} handleClose={setDrawerOpen} />
     </Box>
   );
 }

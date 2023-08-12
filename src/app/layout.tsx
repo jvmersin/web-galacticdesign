@@ -1,11 +1,18 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import Navigation from "@/app/components/Navigation/Navigation";
+import dynamic from "next/dynamic";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
+import "@/app/index.scss";
+
+const Navigation = dynamic(
+  () => import("@/app/components/Navigation/Navigation"),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Galactic Design",
-  description: "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
+  description:
+    "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
   keywords: [
     "web consulting",
     "software consulting",
@@ -33,12 +40,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.galacticdesign.io",
     title: "Galactic Design",
-    description: "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
-    siteName: "Galactic Design"
+    description:
+      "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
+    siteName: "Galactic Design",
   },
   twitter: {
-    card: "summary_large_image"
-  }
+    card: "summary_large_image",
+  },
 };
 
 type RootLayoutProps = {
@@ -52,6 +60,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeRegistry>
           <Navigation />
           {children}
+          <div id="stars" />
+          <div id="stars2" />
+          <div id="stars3" />
         </ThemeRegistry>
       </body>
     </html>
