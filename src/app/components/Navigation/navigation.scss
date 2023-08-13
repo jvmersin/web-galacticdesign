@@ -1,10 +1,11 @@
-.navigationBar {
+.desktop-nav-grid {
     display: grid;
     padding: 10px 0;
     grid-template-columns: 1fr auto 1fr;
 }
 
-.mobileNavBar {
+.mobile-nav-grid {
     display: grid;
+    padding: 10px 0;
     grid-template-columns: 80px auto;
 }

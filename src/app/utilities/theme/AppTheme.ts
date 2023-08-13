@@ -48,7 +48,7 @@ const AppTheme = (themeType: string) =>
     palette: {
       mode: themeType,
       background: {
-        default: "#1B2735",
+        default: "#10151d",
         paper: "#1B2735",
       },
       primary: { main: "#673ab7" },

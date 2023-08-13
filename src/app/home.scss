@@ -1,0 +1,78 @@
+.layout-grid {
+  margin-top: 20px;
+  padding: 1.8rem;
+  display: grid;
+  gap: 1.8rem;
+  position: absolute;
+  width: min(1920px, 100%);
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.new-noteworthy,
+.services,
+.socials,
+.experience,
+.graphics {
+  padding: 20px;
+}
+
+@media (min-width: 1200px) {
+  .layout-grid {
+    grid-template-areas:
+      'one two two two'
+      'three three three four'
+      'five five six six';
+  }
+  .new-noteworthy {
+    grid-area: two;
+  }
+  .services {
+    grid-area: three;
+  }
+  .socials {
+    grid-area: four;
+  }
+  .experience {
+    grid-area: five;
+  }
+  .graphics {
+    grid-area: six;
+  }
+}
+
+.headshot {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-inline: auto;
+}
+
+.avatar-cont {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.project-card-grid {
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .project-card-grid {
+    grid-template-columns: auto;
+  }
+}
+
+.experience-paper {
+  padding: 3px;
+  border-radius: 6px;
+  position: relative;
+  background: linear-gradient(#673ab7, #00b0ff, #ffea00, #4caf50);
+}

@@ -90,7 +90,7 @@ export default function NavigationDrawer({
         <Divider />
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemText primary="Pay Invoice" />
+            <ListItemText primary="Login" />
           </ListItemButton>
         </ListItem>
       </List>

@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Button, Typography } from "@mui/material";
-import styles from "@/app/components/Navigation/navigation.module.css";
 import NavigationLogo from "@/app/components/Navigation/NavigationLogo";
+import "@/app/components/Navigation/navigation.scss";
 
 export default function DesktopNavigation() {
   return (
-    <Box className={styles.navigationBar}>
+    <Box className="desktop-nav-grid">
       <Box
         sx={{
           display: "flex",
@@ -47,7 +47,7 @@ export default function DesktopNavigation() {
         }}
       >
         <Button variant="contained" color="primary">
-          Pay Invoice
+          Login
         </Button>
       </Box>
     </Box>

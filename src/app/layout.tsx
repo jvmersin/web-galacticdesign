@@ -58,11 +58,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <Navigation />
-          {children}
-          <div id="stars" />
-          <div id="stars2" />
-          <div id="stars3" />
+          <main>
+            <div className="star-container">
+              <div id="stars"/>
+              <div id="stars2"/>
+              <div id="stars3"/>
+            </div>
+            <Navigation />
+            {children}
+          </main>
         </ThemeRegistry>
       </body>
     </html>
