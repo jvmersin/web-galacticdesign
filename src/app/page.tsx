@@ -15,7 +15,7 @@ import "@/app/home.scss";
 export default function Home() {
   return (
     <div className="layout-grid">
-      <Paper variant="outlined" className="avatar-cont">
+      <Paper component="section" variant="outlined" className="avatar-cont">
         <Typography variant="h3" align="center" padding="20px">
           Full-stack Engineer
         </Typography>
@@ -30,7 +30,7 @@ export default function Home() {
           &#128205;
         </Typography>
       </Paper>
-      <Paper className="new-noteworthy" variant="outlined">
+      <Paper component="section" className="new-noteworthy" variant="outlined">
         <Typography variant="h3" align="center" gutterBottom>
           New & Noteworthy Projects
         </Typography>
@@ -55,7 +55,7 @@ export default function Home() {
           />
         </Box>
       </Paper>
-      <Paper className="services" variant="outlined">
+      <Paper component="section" className="services" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Services
         </Typography>
@@ -80,7 +80,7 @@ export default function Home() {
           ))}
         </Box>
       </Paper>
-      <Paper className="socials" variant="outlined">
+      <Paper component="section" className="socials" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Socials
         </Typography>
@@ -106,7 +106,7 @@ export default function Home() {
           ))}
         </Box>
       </Paper>
-      <Paper className="experience" variant="outlined">
+      <Paper component="section" className="experience" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Experience
         </Typography>
@@ -120,33 +120,27 @@ export default function Home() {
             padding: "20px",
           }}
         >
-          <div className="experience-border purple">
-            <Paper sx={{ width: "220px" }}>
-              <Stack alignItems="center" padding="20px">
-                <Typography variant="h5">Years Experience</Typography>
-                <Typography variant="h2">12+</Typography>
-              </Stack>
-            </Paper>
-          </div>
-          <div className="experience-border green">
-            <Paper sx={{ width: "220px" }}>
-              <Stack alignItems="center" padding="20px">
-                <Typography variant="h5">Clients Worldwide</Typography>
-                <Typography variant="h2">14+</Typography>
-              </Stack>
-            </Paper>
-          </div>
-          <div className="experience-border yellow">
-            <Paper sx={{ width: "220px" }}>
-              <Stack alignItems="center" padding="20px">
-                <Typography variant="h5">Total Projects</Typography>
-                <Typography variant="h2">60+</Typography>
-              </Stack>
-            </Paper>
-          </div>
+          <Paper sx={{ width: "220px" }}>
+            <Stack alignItems="center" padding="20px">
+              <Typography variant="h5">Years Experience</Typography>
+              <Typography variant="h2">12+</Typography>
+            </Stack>
+          </Paper>
+          <Paper sx={{ width: "220px" }}>
+            <Stack alignItems="center" padding="20px">
+              <Typography variant="h5">Clients Worldwide</Typography>
+              <Typography variant="h2">14+</Typography>
+            </Stack>
+          </Paper>
+          <Paper sx={{ width: "220px" }}>
+            <Stack alignItems="center" padding="20px">
+              <Typography variant="h5">Total Projects</Typography>
+              <Typography variant="h2">60+</Typography>
+            </Stack>
+          </Paper>
         </Box>
       </Paper>
-      <Paper className="graphics" variant="outlined">
+      <Paper component="section" className="graphics" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Technologies
         </Typography>

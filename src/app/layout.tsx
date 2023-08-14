@@ -60,6 +60,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <ThemeRegistry>
           <main>
+            <div className="star-container">
+              <div id="stars" />
+              <div id="stars2" />
+              <div id="stars3" />
+            </div>
             <Navigation />
             {children}
             <Footer />
