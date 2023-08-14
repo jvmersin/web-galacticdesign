@@ -2,6 +2,7 @@ import * as React from "react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
+import Footer from "@/app/components/Footer";
 import "@/app/index.scss";
 
 const Navigation = dynamic(
@@ -60,12 +61,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeRegistry>
           <main>
             <div className="star-container">
-              <div id="stars"/>
-              <div id="stars2"/>
-              <div id="stars3"/>
+              <div id="stars" />
+              <div id="stars2" />
+              <div id="stars3" />
             </div>
             <Navigation />
             {children}
+            <Footer />
           </main>
         </ThemeRegistry>
       </body>

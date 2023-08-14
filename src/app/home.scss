@@ -3,7 +3,7 @@
   padding: 1.8rem;
   display: grid;
   gap: 1.8rem;
-  position: absolute;
+  position: relative;
   width: min(1920px, 100%);
   grid-template-areas:
     'one'
@@ -54,6 +54,7 @@
 
 .avatar-cont {
   display: flex;
+  padding: 0 20px;
   flex-flow: column nowrap;
   justify-content: space-around;
 }
@@ -67,5 +68,23 @@
 @media (max-width: 800px) {
   .project-card-grid {
     grid-template-columns: auto;
+  }
+}
+
+.experience-border {
+  padding: 2px;
+  border-radius: 6px;
+  position: relative;
+
+  &.purple {
+    background: linear-gradient(to right, #673ab7, #ffffff, #00b0ff);
+  }
+
+  &.green {
+    background: linear-gradient(to right, #00b0ff, #ffffff, #4caf50);
+  }
+
+  &.yellow {
+    background: linear-gradient(to right, #4caf50, #ffffff, #ffea00);
   }
 }

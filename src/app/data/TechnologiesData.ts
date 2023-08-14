@@ -50,6 +50,26 @@ const TechnologiesArray: TTechnologiesData[] = [
     width: 50,
     alt: "C Plus Plus",
   },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/mysql-logo.svg",
+    width: 65,
+    alt: "MySQL",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/mongodb-logo.svg",
+    width: 100,
+    alt: "Mongo DB",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/php-logo.svg",
+    width: 65,
+    alt: "PHP",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/jquery-logo.svg",
+    width: 90,
+    alt: "PHP",
+  },
 ];
 
 export { TechnologiesArray };

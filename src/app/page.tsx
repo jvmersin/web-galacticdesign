@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import ProjectCard from "@/app/components/ProjectCard";
-import TechImage from "@/app/components/TechImage";
 import IconImage from "@/app/components/IconImage";
+import SocialsImage from "@/app/components/SocialsImage";
+import TechImage from "@/app/components/TechImage";
 import { ServicesArray, TServicesData } from "@/app/data/ServicesData";
+import { SocialsArray, TSocialsData } from "@/app/data/SocialsData";
 import {
   TechnologiesArray,
   TTechnologiesData,
 } from "@/app/data/TechnologiesData";
 import "@/app/home.scss";
-import { SocialsArray, TSocialsData } from "@/app/data/SocialsData";
-import SocialsImage from "@/app/components/SocialsImage";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         </Typography>
         <img
           className="headshot"
-          src="https://cdn.galacticdesign.io/images/headshots/headshot_03.png"
+          src="https://cdn.galacticdesign.io/images/headshots/headshot_03.jpg"
           alt="James Ehrenberg Headshot"
         />
         <Typography align="center" padding="20px 10px">
@@ -64,10 +64,9 @@ export default function Home() {
             gap: "50px",
             display: "flex",
             flexWrap: "wrap",
+            marginTop: "60px",
             justifyContent: "space-around",
             alignItems: "center",
-            padding: "20px",
-            marginBottom: "30px",
           }}
         >
           {ServicesArray.map((service: TServicesData, index: number) => (
@@ -80,30 +79,6 @@ export default function Home() {
             />
           ))}
         </Box>
-        <Typography variant="h4" gutterBottom>
-          Technologies
-        </Typography>
-        <Box
-          sx={{
-            gap: "50px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "center",
-            padding: "20px",
-          }}
-        >
-          {TechnologiesArray.map(
-            (technology: TTechnologiesData, index: number) => (
-              <TechImage
-                key={index}
-                image={technology.image}
-                width={technology.width}
-                alt={technology.alt}
-              />
-            )
-          )}
-        </Box>
       </Paper>
       <Paper className="socials" variant="outlined">
         <Typography variant="h4" gutterBottom>
@@ -111,7 +86,7 @@ export default function Home() {
         </Typography>
         <Box
           sx={{
-            gap: "30px",
+            gap: "10px",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",
@@ -145,30 +120,57 @@ export default function Home() {
             padding: "20px",
           }}
         >
-          <Paper sx={{ width: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Years Experience</Typography>
-              <Typography variant="h2">10+</Typography>
-            </Stack>
-          </Paper>
-          <Paper sx={{ width: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Clients Worldwide</Typography>
-              <Typography variant="h2">12+</Typography>
-            </Stack>
-          </Paper>
-          <Paper sx={{ width: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Total Projects</Typography>
-              <Typography variant="h2">100+</Typography>
-            </Stack>
-          </Paper>
+          <div className="experience-border purple">
+            <Paper sx={{ width: "220px" }}>
+              <Stack alignItems="center" padding="20px">
+                <Typography variant="h5">Years Experience</Typography>
+                <Typography variant="h2">12+</Typography>
+              </Stack>
+            </Paper>
+          </div>
+          <div className="experience-border green">
+            <Paper sx={{ width: "220px" }}>
+              <Stack alignItems="center" padding="20px">
+                <Typography variant="h5">Clients Worldwide</Typography>
+                <Typography variant="h2">14+</Typography>
+              </Stack>
+            </Paper>
+          </div>
+          <div className="experience-border yellow">
+            <Paper sx={{ width: "220px" }}>
+              <Stack alignItems="center" padding="20px">
+                <Typography variant="h5">Total Projects</Typography>
+                <Typography variant="h2">60+</Typography>
+              </Stack>
+            </Paper>
+          </div>
         </Box>
       </Paper>
       <Paper className="graphics" variant="outlined">
         <Typography variant="h4" gutterBottom>
-          Graphics Work
+          Technologies
         </Typography>
+        <Box
+          sx={{
+            gap: "50px",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+            alignItems: "center",
+            padding: "20px",
+          }}
+        >
+          {TechnologiesArray.map(
+            (technology: TTechnologiesData, index: number) => (
+              <TechImage
+                key={index}
+                image={technology.image}
+                width={technology.width}
+                alt={technology.alt}
+              />
+            )
+          )}
+        </Box>
       </Paper>
     </div>
   );

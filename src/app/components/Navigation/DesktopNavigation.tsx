@@ -25,16 +25,16 @@ export default function DesktopNavigation() {
           alignItems: "center",
         }}
       >
-        <Button href="/" component={Link} color="inherit">
+        <Button href="/" component={Link} color="inherit" size="large">
           Home
         </Button>
-        <Button href="/about" component={Link} color="inherit">
+        <Button href="/about" component={Link} color="inherit" size="large">
           About
         </Button>
-        <Button href="/portfolio" component={Link} color="inherit">
+        <Button href="/portfolio" component={Link} color="inherit" size="large">
           Portfolio
         </Button>
-        <Button href="/contact" component={Link} color="inherit">
+        <Button href="/contact" component={Link} color="inherit" size="large">
           Contact
         </Button>
       </Box>
@@ -46,7 +46,7 @@ export default function DesktopNavigation() {
           paddingRight: "30px",
         }}
       >
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" size="large">
           Login
         </Button>
       </Box>

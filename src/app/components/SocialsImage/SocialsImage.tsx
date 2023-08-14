@@ -18,7 +18,7 @@ export default function SocialsImage({
   link,
 }: IconImageProps) {
   return (
-    <Stack alignItems="center" width="180px">
+    <Stack alignItems="center" width="130px">
       <img
         style={{
           filter: "invert(100%)",
@@ -31,6 +31,7 @@ export default function SocialsImage({
       />
       <Button
         href={link}
+        size="small"
         target="_blank"
         color="inherit"
         endIcon={<OpenInNewIcon />}
