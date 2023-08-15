@@ -10,7 +10,7 @@ export default function Navigation() {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
   return (
-    <Box>
+    <Box component="header">
       {!isDesktop ? (
         <MobileNavigation handleOpen={setDrawerOpen} />
       ) : (

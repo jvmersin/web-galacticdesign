@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Theme, useTheme } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import NavigationLogo from "@/app/components/Navigation/NavigationLogo";
 import "@/app/components/Navigation/navigation.scss";
@@ -10,6 +10,7 @@ type MobileNavigationProps = {
 export default function MobileNavigation({
   handleOpen,
 }: MobileNavigationProps) {
+  const theme: Theme = useTheme();
   return (
     <Box className="mobile-nav-grid">
       <Box
@@ -36,7 +37,12 @@ export default function MobileNavigation({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          pr: "80px",
+          [theme.breakpoints.up(330)]: {
+            pr: "80px",
+          },
+          [theme.breakpoints.up(290)]: {
+            pr: "60px",
+          },
         }}
       >
         <NavigationLogo />

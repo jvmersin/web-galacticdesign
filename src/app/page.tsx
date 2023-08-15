@@ -15,7 +15,12 @@ import "@/app/home.scss";
 export default function Home() {
   return (
     <div className="layout-grid">
-      <Paper component="section" variant="outlined" className="avatar-cont">
+      <Paper
+        component="section"
+        variant="outlined"
+        className="avatar-cont"
+        sx={{ alignSelf: "start" }}
+      >
         <Typography variant="h3" align="center" padding="20px">
           Full-stack Engineer
         </Typography>
@@ -55,7 +60,12 @@ export default function Home() {
           />
         </Box>
       </Paper>
-      <Paper component="section" className="services" variant="outlined">
+      <Paper
+        component="section"
+        className="services"
+        variant="outlined"
+        sx={{ display: "flex", flexFlow: "column nowrap" }}
+      >
         <Typography variant="h4" gutterBottom>
           Services
         </Typography>
@@ -63,10 +73,10 @@ export default function Home() {
           sx={{
             gap: "50px",
             display: "flex",
-            flexWrap: "wrap",
-            marginTop: "60px",
-            justifyContent: "space-around",
             alignItems: "center",
+            flexFlow: "row wrap",
+            justifyContent: "space-around",
+            height: "100%",
           }}
         >
           {ServicesArray.map((service: TServicesData, index: number) => (
@@ -120,19 +130,19 @@ export default function Home() {
             padding: "20px",
           }}
         >
-          <Paper sx={{ width: "220px" }}>
+          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
             <Stack alignItems="center" padding="20px">
               <Typography variant="h5">Years Experience</Typography>
               <Typography variant="h2">12+</Typography>
             </Stack>
           </Paper>
-          <Paper sx={{ width: "220px" }}>
+          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
             <Stack alignItems="center" padding="20px">
               <Typography variant="h5">Clients Worldwide</Typography>
               <Typography variant="h2">14+</Typography>
             </Stack>
           </Paper>
-          <Paper sx={{ width: "220px" }}>
+          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
             <Stack alignItems="center" padding="20px">
               <Typography variant="h5">Total Projects</Typography>
               <Typography variant="h2">60+</Typography>
@@ -140,7 +150,7 @@ export default function Home() {
           </Paper>
         </Box>
       </Paper>
-      <Paper component="section" className="graphics" variant="outlined">
+      <Paper component="section" className="technologies" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Technologies
         </Typography>

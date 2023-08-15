@@ -1,14 +1,9 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
+import Navigation from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer";
 import "@/app/index.scss";
-
-const Navigation = dynamic(
-  () => import("@/app/components/Navigation/Navigation"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   title: "Galactic Design",
@@ -59,12 +54,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <ThemeRegistry>
+          <div className="starfield">
+            <div id="stars-sm" />
+            <div id="stars-md" />
+            <div id="stars-lg" />
+          </div>
           <main>
-            <div className="star-container">
-              <div id="stars" />
-              <div id="stars2" />
-              <div id="stars3" />
-            </div>
             <Navigation />
             {children}
             <Footer />

@@ -1,11 +1,9 @@
 .layout-grid {
   margin-top: 20px;
-  padding: 1.8rem;
   display: grid;
   gap: 1.8rem;
   position: relative;
   z-index: 10;
-  width: min(1920px, 100%);
   grid-template-areas:
     'one'
     'two'
@@ -18,7 +16,7 @@
 .services,
 .socials,
 .experience,
-.graphics {
+.technologies {
   padding: 20px;
 }
 
@@ -41,7 +39,7 @@
   .experience {
     grid-area: five;
   }
-  .graphics {
+  .technologies {
     grid-area: six;
   }
 }
@@ -69,23 +67,5 @@
 @media (max-width: 800px) {
   .project-card-grid {
     grid-template-columns: auto;
-  }
-}
-
-.experience-border {
-  padding: 1px;
-  border-radius: 6px;
-  position: relative;
-
-  &.purple {
-    background: linear-gradient(to right, #673ab7, #ffffff, #00b0ff);
-  }
-
-  &.green {
-    background: linear-gradient(to right, #00b0ff, #ffffff, #4caf50);
-  }
-
-  &.yellow {
-    background: linear-gradient(to right, #4caf50, #ffffff, #ffea00);
   }
 }
