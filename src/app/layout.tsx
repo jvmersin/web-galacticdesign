@@ -1,9 +1,14 @@
 import * as React from "react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
-import Navigation from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer";
 import "@/app/index.scss";
+
+const Navigation = dynamic(
+  () => import("@/app/components/Navigation/Navigation"),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Galactic Design",
