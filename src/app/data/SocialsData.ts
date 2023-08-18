@@ -18,7 +18,7 @@ const SocialsArray: TSocialsData[] = [
         image: "https://cdn.galacticdesign.io/images/vendors/linkedin-logo.svg",
         width: 40,
         alt: "James Ehrenberg",
-        title: "James Ehrenberg",
+        title: "jmehrenberg",
         link: "https://www.linkedin.com/in/jmehrenberg/"
     },
     {

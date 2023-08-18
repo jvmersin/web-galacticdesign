@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import ProjectCard from "@/app/components/ProjectCard";
 import IconImage from "@/app/components/IconImage";
@@ -12,9 +12,9 @@ import {
 } from "@/app/data/TechnologiesData";
 import "@/app/home.scss";
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
-    <div className="layout-grid">
+    <div className="home-grid">
       <Paper
         component="section"
         variant="outlined"
@@ -39,12 +39,12 @@ export default function Home() {
         <Typography variant="h3" align="center" gutterBottom>
           New & Noteworthy Projects
         </Typography>
-        <Box className="project-card-grid">
+        <div className="project-card-grid">
           <ProjectCard
             imageSrc="https://cdn.galacticdesign.io/images/projects/planet-ozzi/site-planet-ozzi-01.jpg"
             imgTitle="Planet OZZI Website Landing"
             cardTitle="Planet OZZI"
-            cardDesc="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. The website also sports a variety of resources such as a custom systems cost calculator, and a custom shopping cart for users to request quotes for popular OZZI products."
+            cardDesc="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. As well as a variety of resources such as a custom systems cost calculator, and a custom shopping cart to request quotes for popular OZZI products."
             webUrl="https://planetozzi.com"
             techStack={["React", "TypeScript", "SCSS"]}
             hasActions={true}
@@ -58,13 +58,16 @@ export default function Home() {
             techStack={["React", "TypeScript", "SCSS", "ExpressJS", "MySQL"]}
             hasActions={true}
           />
-        </Box>
+        </div>
       </Paper>
       <Paper
         component="section"
         className="services"
         variant="outlined"
-        sx={{ display: "flex", flexFlow: "column nowrap" }}
+        sx={{
+          display: "flex",
+          flexFlow: "column nowrap",
+        }}
       >
         <Typography variant="h4" gutterBottom>
           Services
@@ -97,10 +100,9 @@ export default function Home() {
         <Box
           sx={{
             gap: "10px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "center",
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            placeItems: "center",
             padding: "20px",
           }}
         >

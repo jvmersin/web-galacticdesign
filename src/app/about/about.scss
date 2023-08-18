@@ -1,0 +1,57 @@
+.about-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 10;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.avatar,
+.summary,
+.education,
+.experience,
+.skills {
+  padding: 20px;
+}
+
+.avatar,
+.education {
+  align-self: start;
+}
+
+@media (min-width: 1200px) {
+  .about-grid {
+    grid-template-areas:
+      'one two two two'
+      'three three four four'
+      'five five five five';
+  }
+  .avatar {
+    grid-area: one;
+  }
+  .summary {
+    grid-area: two;
+  }
+  .experience {
+    grid-area: three;
+  }
+  .education {
+    grid-area: four;
+  }
+  .skills {
+    grid-area: five;
+  }
+}
+
+.headshot {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-inline: auto;
+}

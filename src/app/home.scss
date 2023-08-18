@@ -1,4 +1,4 @@
-.layout-grid {
+.home-grid {
   margin-top: 20px;
   display: grid;
   gap: 1.8rem;
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: 1200px) {
-  .layout-grid {
+  .home-grid {
     grid-template-areas:
       'one two two two'
       'three three three four'
@@ -61,11 +61,11 @@
 .project-card-grid {
   gap: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .project-card-grid {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
   }
 }

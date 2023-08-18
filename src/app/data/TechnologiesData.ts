@@ -41,14 +41,14 @@ const TechnologiesArray: TTechnologiesData[] = [
     alt: "Sass",
   },
   {
-    image: "https://cdn.galacticdesign.io/images/vendors/csharp-logo.svg",
-    width: 50,
-    alt: "C Sharp",
+    image: "https://cdn.galacticdesign.io/images/vendors/php-logo.svg",
+    width: 65,
+    alt: "PHP",
   },
   {
-    image: "https://cdn.galacticdesign.io/images/vendors/cplusplus-logo.svg",
-    width: 50,
-    alt: "C Plus Plus",
+    image: "https://cdn.galacticdesign.io/images/vendors/java-logo.svg",
+    width: 60,
+    alt: "Java",
   },
   {
     image: "https://cdn.galacticdesign.io/images/vendors/mysql-logo.svg",
@@ -60,15 +60,16 @@ const TechnologiesArray: TTechnologiesData[] = [
     width: 100,
     alt: "Mongo DB",
   },
+
   {
-    image: "https://cdn.galacticdesign.io/images/vendors/php-logo.svg",
-    width: 65,
-    alt: "PHP",
+    image: "https://cdn.galacticdesign.io/images/vendors/csharp-logo.svg",
+    width: 50,
+    alt: "C Sharp",
   },
   {
-    image: "https://cdn.galacticdesign.io/images/vendors/jquery-logo.svg",
-    width: 90,
-    alt: "PHP",
+    image: "https://cdn.galacticdesign.io/images/vendors/cplusplus-logo.svg",
+    width: 50,
+    alt: "C Plus Plus",
   },
 ];
 

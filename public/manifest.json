@@ -1,0 +1,25 @@
+{
+  "short_name": "GalacticDesign",
+  "name": "Galactic Design",
+  "icons": [
+    {
+      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#673ab7",
+  "background_color": "#10151d"
+}

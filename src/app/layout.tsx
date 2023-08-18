@@ -11,6 +11,7 @@ const Navigation = dynamic(
 );
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cdn.galacticdesign.io"),
   title: "Galactic Design",
   description:
     "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
@@ -30,12 +31,15 @@ export const metadata: Metadata = {
     "rhode island web development",
     "rhode island based software development",
   ],
+  robots: "robots.txt",
+  manifest: "manifest.json",
   authors: {
     name: "James Ehrenberg",
+    url: "https://www.galacticdesign.io",
   },
   icons: {
-    icon: "https://cdn.galacticdesign.io/images/favicon/favicon-16x16.png",
-    apple: "https://cdn.galacticdesign.io/images/favicon/favicon-192x192.png",
+    icon: "/images/favicon/favicon-16x16.png",
+    apple: "/images/favicon/favicon-192x192.png",
   },
   openGraph: {
     type: "website",
@@ -48,6 +52,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  appleWebApp: {
+    capable: true,
+    title: "Galactic Design",
+    statusBarStyle: "default"
+  }
 };
 
 type RootLayoutProps = {

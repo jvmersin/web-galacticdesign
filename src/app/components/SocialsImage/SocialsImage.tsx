@@ -18,7 +18,7 @@ export default function SocialsImage({
   link,
 }: IconImageProps) {
   return (
-    <Stack alignItems="center" width="130px">
+    <Stack alignItems="center">
       <img
         style={{
           filter: "invert(100%)",
