@@ -41,6 +41,11 @@ const TechnologiesArray: TTechnologiesData[] = [
     alt: "Sass",
   },
   {
+    image: "https://cdn.galacticdesign.io/images/vendors/nodejs-logo.svg",
+    width: 75,
+    alt: "NodeJS",
+  },
+  {
     image: "https://cdn.galacticdesign.io/images/vendors/php-logo.svg",
     width: 65,
     alt: "PHP",
@@ -60,7 +65,6 @@ const TechnologiesArray: TTechnologiesData[] = [
     width: 100,
     alt: "Mongo DB",
   },
-
   {
     image: "https://cdn.galacticdesign.io/images/vendors/csharp-logo.svg",
     width: 50,
@@ -70,6 +74,47 @@ const TechnologiesArray: TTechnologiesData[] = [
     image: "https://cdn.galacticdesign.io/images/vendors/cplusplus-logo.svg",
     width: 50,
     alt: "C Plus Plus",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/expressjs-logo.svg",
+    width: 100,
+    alt: "Express",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/bootstrap-logo.svg",
+    width: 65,
+    alt: "Bootstrap",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/photoshop-logo.svg",
+    width: 50,
+    alt: "Photoshop",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/illustrator-logo.svg",
+    width: 50,
+    alt: "Illustrator",
+  },
+  {
+    image:
+      "https://cdn.galacticdesign.io/images/vendors/after-effects-logo.svg",
+    width: 50,
+    alt: "After Effects",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/windows-logo.svg",
+    width: 40,
+    alt: "Windows",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/linux-logo.svg",
+    width: 40,
+    alt: "Linux",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/macos-logo.svg",
+    width: 50,
+    alt: "MacOS",
   },
 ];
 

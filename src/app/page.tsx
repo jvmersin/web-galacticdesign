@@ -167,14 +167,17 @@ export default function Home(): ReactElement {
           }}
         >
           {TechnologiesArray.map(
-            (technology: TTechnologiesData, index: number) => (
-              <TechImage
-                key={index}
-                image={technology.image}
-                width={technology.width}
-                alt={technology.alt}
-              />
-            )
+            (technology: TTechnologiesData, index: number) => {
+              if (index >= 13) return;
+              return (
+                <TechImage
+                  key={index}
+                  image={technology.image}
+                  width={technology.width}
+                  alt={technology.alt}
+                />
+              );
+            }
           )}
         </Box>
       </Paper>

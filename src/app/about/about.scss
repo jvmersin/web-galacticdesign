@@ -15,7 +15,7 @@
 .avatar,
 .summary,
 .education,
-.experience,
+.work-history,
 .skills {
   padding: 20px;
 }
@@ -38,7 +38,7 @@
   .summary {
     grid-area: two;
   }
-  .experience {
+  .work-history {
     grid-area: three;
   }
   .education {
@@ -46,6 +46,27 @@
   }
   .skills {
     grid-area: five;
+  }
+}
+
+.skill-avatar-grid {
+  gap: 50px;
+}
+
+@media (min-width: 1400px) {
+  .skill-avatar-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(11, 1fr);
+  }
+}
+
+@media (max-width: 1399px) {
+  .skill-avatar-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 

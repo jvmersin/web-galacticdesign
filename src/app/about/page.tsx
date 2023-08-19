@@ -1,10 +1,15 @@
 import React, { ReactElement } from "react";
-import { Divider, Paper, Typography } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
 import "@/app/about/about.scss";
 import { EducationHistory, WorkHistory } from "@/app/data/PersonalHistoryData";
 import PersonalHistory, {
   TPersonalHistory,
 } from "@/app/components/PersonalHistory/PersonalHistory";
+import {
+  TechnologiesArray,
+  TTechnologiesData,
+} from "@/app/data/TechnologiesData";
+import TechImage from "@/app/components/TechImage";
 
 export default function About(): ReactElement {
   return (
@@ -29,28 +34,29 @@ export default function About(): ReactElement {
           engineering.
         </Typography>
         <Typography pb={2}>
-          My educational pursuit led me to a Bachelor's in Computer Science, a
-          cornerstone in my quest for knowledge and expertise. I've embraced the
-          intricacies of coding and development while fostering a deep
-          admiration for UI/UX design. Finding satisfaction in crafting elegant
-          and captivating user experiences that resonate with customers.
+          With eight years of management experience under my belt, I've honed my
+          ability to curate and execute continuous process improvements. My
+          expertise extends to hiring, onboarding, and leading diverse teams and
+          leaders. Notably, I've implemented process improvements that
+          significantly boosted efficiencies and lowered organizational costs.
         </Typography>
         <Typography pb={2}>
-          Beyond technical finesse, I am driven to simplify and enhance the
-          lives of others through software. I find joy from transforming complex
-          challenges into intuitive solutions that streamline everyday tasks,
-          empowering individuals in their digital interactions.
+          Beyond the lines of code and pixels, my purpose as a developer has
+          always been rooted in making life easier for people. I find immense
+          satisfaction in leveraging software to transform complex challenges
+          into simple, intuitive solutions, ushering in convenience and
+          empowerment for users.
         </Typography>
         <Typography pb={2}>
-          Looking ahead, my aspirations have taken flight towards the aerospace
-          industry. A dream of mine is to contribute as a Software Engineer in
-          this dynamic field, harnessing technology to fuel innovation and drive
-          progress. With an unquenchable thirst for learning and an unyielding
-          commitment to excellence, I'm excited to continue my journey, crafting
-          innovative solutions and leaving a lasting impact.
+          Peering into the future, my aspirations take flight towards the
+          aerospace industry. My dream is to be a driving force as a Software
+          Engineer, contributing to the ever-evolving landscape of aviation and
+          space exploration. With unwavering dedication to excellence and a
+          hunger for ongoing learning, I'm excited to leave my mark on this
+          dynamic field.
         </Typography>
       </Paper>
-      <Paper component="section" variant="outlined" className="experience">
+      <Paper component="section" variant="outlined" className="work-history">
         <Typography variant="h4" gutterBottom>
           Experience
         </Typography>
@@ -90,15 +96,18 @@ export default function About(): ReactElement {
         <Typography variant="h4" gutterBottom>
           Acquired Skills
         </Typography>
-        <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
+        <div className="skill-avatar-grid">
+          {TechnologiesArray.map(
+            (technology: TTechnologiesData, index: number) => (
+              <TechImage
+                key={index}
+                image={technology.image}
+                width={technology.width}
+                alt={technology.alt}
+              />
+            )
+          )}
+        </div>
       </Paper>
     </div>
   );
