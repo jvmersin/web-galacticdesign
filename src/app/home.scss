@@ -9,7 +9,8 @@
     'two'
     'three'
     'four'
-    'five';
+    'five'
+    'six';
 }
 
 .new-noteworthy,
@@ -61,11 +62,42 @@
 .project-card-grid {
   gap: 30px;
   display: grid;
-
 }
 
 @media (min-width: 800px) {
   .project-card-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.services-grid {
+  gap: 20px;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.socials-grid {
+  gap: 20px;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.experience-grid {
+  gap: 40px;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.technologies-grid {
+  gap: 20px;
+  display: grid;
+  place-items: center;
+  margin: 2rem 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 }

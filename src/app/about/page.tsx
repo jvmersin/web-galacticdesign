@@ -1,7 +1,8 @@
 import React, { ReactElement } from "react";
-import { Box, Divider, Paper, Typography } from "@mui/material";
-import "@/app/about/about.scss";
+import { Metadata } from "next";
+import { Divider, Paper, Typography } from "@mui/material";
 import { EducationHistory, WorkHistory } from "@/app/data/PersonalHistoryData";
+import TechImage from "@/app/components/TechImage";
 import PersonalHistory, {
   TPersonalHistory,
 } from "@/app/components/PersonalHistory/PersonalHistory";
@@ -9,7 +10,29 @@ import {
   TechnologiesArray,
   TTechnologiesData,
 } from "@/app/data/TechnologiesData";
-import TechImage from "@/app/components/TechImage";
+import "@/app/about/about.scss";
+
+export const metadata: Metadata = {
+  title: "Galactic Design | About",
+  description:
+    "Learn more about the man behind the heat shield. Delve into the past of Galactic Design, their inspirations, achievements, and aspirations for the future.",
+  keywords: [
+    "about galactic design",
+    "learn more galactic design",
+    "learn about galactic design",
+    "Galactic Design About",
+    "Galactic Design History",
+    "history of galactic design",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://www.galacticdesign.io/about",
+    title: "Galactic Design | About",
+    description:
+        "Learn more about the man behind the heat shield. Delve into the past of Galactic Design, their inspirations, achievements, and aspirations for the future.",
+    siteName: "Galactic Design",
+  },
+};
 
 export default function About(): ReactElement {
   return (

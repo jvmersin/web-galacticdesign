@@ -72,16 +72,7 @@ export default function Home(): ReactElement {
         <Typography variant="h4" gutterBottom>
           Services
         </Typography>
-        <Box
-          sx={{
-            gap: "50px",
-            display: "flex",
-            alignItems: "center",
-            flexFlow: "row wrap",
-            justifyContent: "space-around",
-            height: "100%",
-          }}
-        >
+        <div className="services-grid">
           {ServicesArray.map((service: TServicesData, index: number) => (
             <IconImage
               key={index}
@@ -91,21 +82,13 @@ export default function Home(): ReactElement {
               title={service.title}
             />
           ))}
-        </Box>
+        </div>
       </Paper>
       <Paper component="section" className="socials" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Socials
         </Typography>
-        <Box
-          sx={{
-            gap: "10px",
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            placeItems: "center",
-            padding: "20px",
-          }}
-        >
+        <div className="socials-grid">
           {SocialsArray.map((social: TSocialsData, index: number) => (
             <SocialsImage
               key={index}
@@ -116,59 +99,41 @@ export default function Home(): ReactElement {
               link={social.link}
             />
           ))}
-        </Box>
+        </div>
       </Paper>
       <Paper component="section" className="experience" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Experience
         </Typography>
-        <Box
-          sx={{
-            gap: "30px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "center",
-            padding: "20px",
-          }}
-        >
-          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Years Experience</Typography>
-              <Typography variant="h2">12+</Typography>
+        <div className="experience-grid">
+          <Paper sx={{ width: "100%", maxWidth: "200px", padding: "1.5rem 0" }}>
+            <Stack alignItems="center">
+              <Typography variant="h6">Years Experience</Typography>
+              <Typography variant="h3">12+</Typography>
             </Stack>
           </Paper>
-          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Clients Worldwide</Typography>
-              <Typography variant="h2">14+</Typography>
+          <Paper sx={{ width: "100%", maxWidth: "200px", padding: "1.5rem 0" }}>
+            <Stack alignItems="center">
+              <Typography variant="h6">Clients Worldwide</Typography>
+              <Typography variant="h3">14+</Typography>
             </Stack>
           </Paper>
-          <Paper sx={{ width: "100%", maxWidth: "220px" }}>
-            <Stack alignItems="center" padding="20px">
-              <Typography variant="h5">Total Projects</Typography>
-              <Typography variant="h2">60+</Typography>
+          <Paper sx={{ width: "100%", maxWidth: "200px", padding: "1.5rem 0" }}>
+            <Stack alignItems="center">
+              <Typography variant="h6">Total Projects</Typography>
+              <Typography variant="h3">60+</Typography>
             </Stack>
           </Paper>
-        </Box>
+        </div>
       </Paper>
       <Paper component="section" className="technologies" variant="outlined">
         <Typography variant="h4" gutterBottom>
           Technologies
         </Typography>
-        <Box
-          sx={{
-            gap: "50px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "center",
-            padding: "20px",
-          }}
-        >
+        <div className="technologies-grid">
           {TechnologiesArray.map(
             (technology: TTechnologiesData, index: number) => {
-              if (index >= 13) return;
+              if (index >= 12) return;
               return (
                 <TechImage
                   key={index}
@@ -179,7 +144,7 @@ export default function Home(): ReactElement {
               );
             }
           )}
-        </Box>
+        </div>
       </Paper>
     </div>
   );

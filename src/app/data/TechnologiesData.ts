@@ -46,6 +46,11 @@ const TechnologiesArray: TTechnologiesData[] = [
     alt: "NodeJS",
   },
   {
+    image: "https://cdn.galacticdesign.io/images/vendors/python-logo.svg",
+    width: 45,
+    alt: "Python",
+  },
+  {
     image: "https://cdn.galacticdesign.io/images/vendors/php-logo.svg",
     width: 65,
     alt: "PHP",
@@ -81,9 +86,19 @@ const TechnologiesArray: TTechnologiesData[] = [
     alt: "Express",
   },
   {
+    image: "https://cdn.galacticdesign.io/images/vendors/mui-logo.svg",
+    width: 50,
+    alt: "Material UI",
+  },
+  {
     image: "https://cdn.galacticdesign.io/images/vendors/bootstrap-logo.svg",
     width: 65,
     alt: "Bootstrap",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/aws-logo.svg",
+    width: 60,
+    alt: "Amazon Web Services",
   },
   {
     image: "https://cdn.galacticdesign.io/images/vendors/photoshop-logo.svg",
@@ -100,6 +115,11 @@ const TechnologiesArray: TTechnologiesData[] = [
       "https://cdn.galacticdesign.io/images/vendors/after-effects-logo.svg",
     width: 50,
     alt: "After Effects",
+  },
+  {
+    image: "https://cdn.galacticdesign.io/images/vendors/ms-365-logo.svg",
+    width: 50,
+    alt: "Microsoft 365 Suite",
   },
   {
     image: "https://cdn.galacticdesign.io/images/vendors/windows-logo.svg",

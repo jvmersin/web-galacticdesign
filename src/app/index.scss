@@ -28,7 +28,7 @@ body {
 
 main {
   display: grid;
-  width: min(1920px, 100% - 3rem);
+  width: min(85em, 100% - 3rem);
   min-height: 100dvh;
   min-height: 100vh;
   margin-inline: auto;

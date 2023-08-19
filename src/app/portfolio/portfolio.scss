@@ -1,0 +1,14 @@
+.portfolio-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 10;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six';
+}
