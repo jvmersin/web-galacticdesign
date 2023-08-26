@@ -1,0 +1,66 @@
+.portfolio-piece-grid,
+.portfolio-piece-grid-reverse {
+  gap: 1.8rem;
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas:
+    'one'
+    'two';
+  min-height: 600px;
+}
+
+@media (min-width: 1200px) {
+  .portfolio-piece-grid {
+    grid-template-areas:
+    'one one two';
+  }
+  .portfolio-piece-grid-reverse {
+    grid-template-areas:
+    'one two two';
+  }
+}
+
+.browser-window {
+  width: 100%;
+  grid-area: one;
+  border-radius: 6px;
+
+  &.reverse {
+    grid-area: two;
+  }
+}
+
+.browser-bar {
+  height: 30px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 80px 1fr;
+  background: lightgrey;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+}
+
+.browser-controls {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.browser-button {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: grey;
+}
+
+.browser-image {
+  width: 100%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.about-portfolio-piece {
+  padding: 1.5rem 2.2rem;
+  align-self: end;
+}

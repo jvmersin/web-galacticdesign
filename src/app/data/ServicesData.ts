@@ -9,8 +9,8 @@ const ServicesArray: TServicesData[] = [
   {
     image: "https://cdn.galacticdesign.io/images/icons/coding.svg",
     width: 60,
-    alt: "Web/Software Development",
-    title: "Web/Software Development",
+    alt: "App Development",
+    title: "App Development",
   },
   {
     image: "https://cdn.galacticdesign.io/images/icons/consulting.svg",

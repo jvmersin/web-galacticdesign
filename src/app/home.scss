@@ -74,8 +74,9 @@
   gap: 20px;
   display: grid;
   place-items: center;
+  justify-items: center;
   margin-top: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .socials-grid {
