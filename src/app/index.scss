@@ -61,7 +61,7 @@ svg {
   &:after {
     content: " ";
     position: absolute;
-    top: 2500px;
+    top: 6000px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -79,7 +79,7 @@ svg {
   &:after {
     content: "";
     position: absolute;
-    top: 2500px;
+    top: 6000px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -97,7 +97,7 @@ svg {
   &:after {
     content: "";
     position: absolute;
-    top: 2500px;
+    top: 6000px;
     width: 3px;
     height: 3px;
     background: transparent;
@@ -110,6 +110,6 @@ svg {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-2500px);
+    transform: translateY(-1000px);
   }
 }

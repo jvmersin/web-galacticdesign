@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://www.galacticdesign.io/about",
     title: "Galactic Design | About",
     description:
-        "Learn more about the man behind the heat shield. Delve into the past of Galactic Design, their inspirations, achievements, and aspirations for the future.",
+      "Learn more about the man behind the heat shield. Delve into the past of Galactic Design, their inspirations, achievements, and aspirations for the future.",
     siteName: "Galactic Design",
   },
 };
