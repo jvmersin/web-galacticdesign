@@ -47,8 +47,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/"
             component={Link}
-            selected={location.pathname === "/"}
-            disabled={location.pathname === "/"}
+            selected={window.location.pathname === "/"}
+            disabled={window.location.pathname === "/"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Home" />
@@ -58,8 +58,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/about"
             component={Link}
-            selected={location.pathname === "/about"}
-            disabled={location.pathname === "/about"}
+            selected={window.location.pathname === "/about"}
+            disabled={window.location.pathname === "/about"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="About" />
@@ -69,8 +69,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/portfolio"
             component={Link}
-            selected={location.pathname === "/portfolio"}
-            disabled={location.pathname === "/portfolio"}
+            selected={window.location.pathname === "/portfolio"}
+            disabled={window.location.pathname === "/portfolio"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Portfolio" />
@@ -80,8 +80,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/contact"
             component={Link}
-            selected={location.pathname === "/contact"}
-            disabled={location.pathname === "/contact"}
+            selected={window.location.pathname === "/contact"}
+            disabled={window.location.pathname === "/contact"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Contact" />

@@ -24,17 +24,17 @@ export default function Portfolio(): ReactElement {
   return (
     <div className="portfolio-grid">
       <PortfolioPiece
-        animate
         reverse
+        imgClass="jesmac"
         image="https://cdn.galacticdesign.io/images/projects/jesmac/site-jesmac-01.jpg"
         alt="Jesmac Home Page"
         title="Jesmac Inc."
         description={`Jesmac is a an online platform designed to showcase current and previous work from Jesmac Inc. The website sports a mobile-first user interface designed around touch functionality for its slideshows and images galeries. Users can view the history of Jesmac and its team, the companies priority and dedication to safety, and its unique training techniques for getting its employees ready to hit the field.\n\nThe website also includes a rich portfolio of work from Jesmac Inc. that is conveniently broken down into categories. Users can easily view the work that is important to them when deciding if Jesmac is the right fit for their construction project.`}
         website="https://jesmacinc.com"
-        techStack={["HTML", "SCSS", "PHP", "JavaScript", "jQuery"]}
+        techStack={["HTML", "SCSS", "PHP", "JavaScript", "jQuery", "Node.js"]}
       />
       <PortfolioPiece
-        animate
+        imgClass="phoenix"
         image="https://cdn.galacticdesign.io/images/projects/phoenix-strategy/site-phoenix-01.jpg"
         alt="Phoenix Strategy Home Page"
         title="Phoenix Strategy"
@@ -43,17 +43,17 @@ export default function Portfolio(): ReactElement {
         techStack={["HTML", "SCSS", "TypeScript"]}
       />
       <PortfolioPiece
-        animate
         reverse
+        imgClass="louis"
         image="https://cdn.galacticdesign.io/images/projects/louis-jardin/site-lou-01.jpg"
         alt="Louis Jardin Home Page"
         title="Louis Jardin"
         description="Louis Jardin is a freelance multimedia producer. His website serves as a portfolio of his work both at Vice and through his freelance endeavors. The wesbite is a multimedia showcase with a beautiful reel of Louis' work front and center, and thumbnails throughout the site providing previews of each of his individual works."
         website="https://louisjardin.com"
-        techStack={["HTML", "SCSS", "JavaScript", "jQuery"]}
+        techStack={["HTML", "SCSS", "JavaScript", "jQuery", "Node.js"]}
       />
       <PortfolioPiece
-        animate
+        imgClass="college"
         image="https://cdn.galacticdesign.io/images/projects/college-storage/site-cs-13.jpg"
         alt="College Storage Home Page"
         title="College Storage"
@@ -62,17 +62,17 @@ export default function Portfolio(): ReactElement {
         techStack={["React", "SCSS", "TypeScript", "ExpressJS", "MySQL"]}
       />
       <PortfolioPiece
-        animate
         reverse
+        imgClass="ozzi"
         image="https://cdn.galacticdesign.io/images/projects/planet-ozzi/site-planet-ozzi-01.jpg"
         alt="PlanetOZZI Home Page"
         title="PlanetOZZI"
         description="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. As well as a variety of resources such as a custom systems cost calculator, and a custom shopping cart to request quotes for popular OZZI products."
         website="https://planetozzi.com"
-        techStack={["React", "SCSS", "TypeScript"]}
+        techStack={["React", "SCSS", "TypeScript", "Node.js"]}
       />
       <PortfolioPiece
-        animate
+        imgClass="berg"
         image="https://cdn.galacticdesign.io/images/projects/berg-design/site-berg-design-01.jpg"
         alt="Berg Design Build Home Page"
         title="Berg Design Build"

@@ -1,14 +1,9 @@
 import * as React from "react";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
+import Navigation from "@/app/components/Navigation/Navigation";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
 import Footer from "@/app/components/Footer";
 import "@/app/index.scss";
-
-const Navigation = dynamic(
-  () => import("@/app/components/Navigation/Navigation"),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cdn.galacticdesign.io"),
@@ -55,8 +50,8 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     title: "Galactic Design",
-    statusBarStyle: "default"
-  }
+    statusBarStyle: "default",
+  },
 };
 
 type RootLayoutProps = {

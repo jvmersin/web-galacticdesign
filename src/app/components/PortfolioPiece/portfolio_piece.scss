@@ -16,6 +16,7 @@
 .browser-window {
   width: 100%;
   grid-area: one;
+  min-width: 300px;
   border-radius: 6px;
 }
 
@@ -56,7 +57,6 @@
   top: 0;
   width: 100%;
   position: relative;
-  transition: top 5s ease-in-out;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -86,9 +86,47 @@
     grid-area: two!important;
   }
 
-  .animate {
+  .jesmac {
+    transition: top 8s ease-in-out;
+
     &:hover {
-      top: -810px;
+      top: -870px;
+    }
+  }
+
+  .phoenix {
+    transition: top 6s ease-in-out;
+    &:hover {
+      top: -900px;
+    }
+  }
+
+  .louis {
+    transition: top 12s ease-in-out;
+    &:hover {
+      top: -1990px;
+    }
+  }
+
+  .college {
+    transition: top 6s ease-in-out;
+    &:hover {
+      top: -715px;
+    }
+  }
+
+  .ozzi {
+    transition: top 14s ease-in-out;
+    &:hover {
+      top: -2590px;
+    }
+  }
+
+  .berg {
+    transition: top 12s ease-in-out;
+
+    &:hover {
+      top: -1365px;
     }
   }
 }

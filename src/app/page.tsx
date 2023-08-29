@@ -41,16 +41,16 @@ export default function Home(): ReactElement {
         </Typography>
         <div className="project-card-grid">
           <ProjectCard
-            imageSrc="https://cdn.galacticdesign.io/images/projects/planet-ozzi/site-planet-ozzi-04.jpg"
+            imageSrc="https://cdn.galacticdesign.io/images/projects/planet-ozzi/site-planet-ozzi-06.jpg"
             imgTitle="Planet OZZI Website Landing"
             cardTitle="Planet OZZI"
             cardDesc="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. As well as a variety of resources such as a custom systems cost calculator, and a custom shopping cart to request quotes for popular OZZI products."
             webUrl="https://planetozzi.com"
-            techStack={["React", "SCSS", "TypeScript"]}
+            techStack={["React", "SCSS", "TypeScript", "Node.js"]}
             hasActions={true}
           />
           <ProjectCard
-            imageSrc="https://cdn.galacticdesign.io/images/projects/college-storage/site-cs-14.jpg"
+            imageSrc="https://cdn.galacticdesign.io/images/projects/college-storage/site-cs-18.jpg"
             imgTitle="College Storage Website Landing"
             cardTitle="College Storage"
             cardDesc="College Storage is an online platform suite for its end-users and its administrators. The website provides a friendly interface for users to browse different services, view pricing, and sign up for seasonal storage. College Storage is accompanied by a web-based user portal for viewing and modifying storage and account information. As well as a dashboard for management to view, add, and edit new pricing, pickup locations, student accounts, and more."

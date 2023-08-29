@@ -11,7 +11,7 @@ type PortfolioPieceProps = {
   techStack: string[];
   website?: string;
   reverse?: boolean;
-  animate?: boolean;
+  imgClass?: string;
 };
 
 export default function PortfolioPiece({
@@ -22,7 +22,7 @@ export default function PortfolioPiece({
   techStack,
   website,
   reverse,
-  animate,
+  imgClass,
 }: PortfolioPieceProps): ReactElement {
   return (
     <div className={`portfolio-piece-grid${reverse ? "-reverse" : ""}`}>
@@ -37,7 +37,7 @@ export default function PortfolioPiece({
         <div className="browser-content">
           <img
             loading="lazy"
-            className={`browser-image ${animate ? "animate" : ""}`}
+            className={`browser-image ${imgClass ? imgClass : ""}`}
             src={image}
             alt={alt}
           />
