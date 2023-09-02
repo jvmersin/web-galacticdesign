@@ -5,12 +5,42 @@ import "@/app/home.scss";
 export default function Loading(): ReactElement {
   return (
     <div className="home-grid">
-      <Skeleton className="avatar-cont" height="100%" variant="rounded" />
-      <Skeleton className="new-noteworthy" height="100%" variant="rounded" />
-      <Skeleton className="services" height="100%" variant="rounded" />
-      <Skeleton className="socials" height="100%" variant="rounded" />
-      <Skeleton className="experience" height="100%" variant="rounded" />
-      <Skeleton className="technologies" height="100%" variant="rounded" />
+      <Skeleton
+        className="avatar-cont"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
+      <Skeleton
+        className="new-noteworthy"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
+      <Skeleton
+        className="services"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
+      <Skeleton
+        className="socials"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
+      <Skeleton
+        className="experience"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
+      <Skeleton
+        className="technologies"
+        height="100%"
+        variant="rounded"
+        sx={{ minHeight: "500px" }}
+      />
     </div>
   );
 }
