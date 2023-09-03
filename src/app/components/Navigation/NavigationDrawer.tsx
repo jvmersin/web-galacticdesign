@@ -9,6 +9,7 @@ import {
   ListItemText,
   ListSubheader,
 } from "@mui/material";
+import {usePathname} from "next/navigation";
 
 type NavigationDrawerProps = {
   open: boolean;
@@ -18,6 +19,7 @@ export default function NavigationDrawer({
   open,
   handleClose,
 }: NavigationDrawerProps) {
+  const pathname = usePathname();
   return (
     <Drawer anchor="left" open={open} onClose={() => handleClose(false)}>
       <List
@@ -47,8 +49,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/"
             component={Link}
-            selected={window.location.pathname === "/"}
-            disabled={window.location.pathname === "/"}
+            selected={pathname === "/"}
+            disabled={pathname === "/"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Home" />
@@ -58,8 +60,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/about"
             component={Link}
-            selected={window.location.pathname === "/about"}
-            disabled={window.location.pathname === "/about"}
+            selected={pathname === "/about"}
+            disabled={pathname === "/about"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="About" />
@@ -69,8 +71,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/portfolio"
             component={Link}
-            selected={window.location.pathname === "/portfolio"}
-            disabled={window.location.pathname === "/portfolio"}
+            selected={pathname === "/portfolio"}
+            disabled={pathname === "/portfolio"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Portfolio" />
@@ -80,8 +82,8 @@ export default function NavigationDrawer({
           <ListItemButton
             href="/contact"
             component={Link}
-            selected={window.location.pathname === "/contact"}
-            disabled={window.location.pathname === "/contact"}
+            selected={pathname === "/contact"}
+            disabled={pathname === "/contact"}
             onClick={() => handleClose(false)}
           >
             <ListItemText primary="Contact" />

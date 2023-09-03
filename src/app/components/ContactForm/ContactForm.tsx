@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
 import { closeSnackbar, enqueueSnackbar, SnackbarProvider } from "notistack";
@@ -82,13 +81,15 @@ export default function ContactForm() {
     setDisabled(true);
     if (validateForm()) {
       enqueueSnackbar("It's on it's way, hang tight!", { variant: "info" });
-      axios({
+      fetch("http://cloud.galacticdesign.io:5873/contact", {
         method: "POST",
-        url: "http://cloud.galacticdesign.io:5873/contact",
-        data: {
+        body: JSON.stringify({
           name: name,
           email: email,
           message: message,
+        }),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
         },
       })
         .then(() => {
@@ -101,7 +102,7 @@ export default function ContactForm() {
           closeSnackbar();
           enqueueSnackbar(
             "An error occurred sending your message, please try again or contact support.",
-            { variant: "error" },
+            { variant: "error" }
           );
         })
         .finally(() => {
@@ -112,7 +113,7 @@ export default function ContactForm() {
         });
     }
     setDisabled(false);
-  }
+  };
 
   return (
     <Box>
