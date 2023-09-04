@@ -81,7 +81,7 @@ export default function ContactForm() {
     setDisabled(true);
     if (validateForm()) {
       enqueueSnackbar("It's on it's way, hang tight!", { variant: "info" });
-      fetch("https://galactic.myqnapcloud.com:5873/contact", {
+      fetch("https://server.galacticdesign.io/contact", {
         method: "POST",
         body: JSON.stringify({
           name: name,
@@ -89,21 +89,22 @@ export default function ContactForm() {
           message: message,
         }),
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
         },
       })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) {
+            closeSnackbar();
+            enqueueSnackbar(
+                "An error occurred sending your message, please try again or contact support.",
+                { variant: "error" }
+            );
+            return;
+          }
           closeSnackbar();
           enqueueSnackbar("Your message was sent, thanks for reaching out!", {
             variant: "success",
           });
-        })
-        .catch(() => {
-          closeSnackbar();
-          enqueueSnackbar(
-            "An error occurred sending your message, please try again or contact support.",
-            { variant: "error" }
-          );
         })
         .finally(() => {
           setName("");
