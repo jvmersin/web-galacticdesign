@@ -1,8 +1,7 @@
-import { ReactElement } from "react";
 import { Skeleton } from "@mui/material";
 import "@/app/home.scss";
 
-export default function Loading(): ReactElement {
+export default function Loading() {
   return (
     <div className="home-grid">
       <Skeleton

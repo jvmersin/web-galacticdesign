@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Metadata } from "next";
 import PortfolioPiece from "@/app/components/PortfolioPiece/PortfolioPiece";
 import "@/app/portfolio/portfolio.scss";
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Portfolio(): ReactElement {
+export default function Portfolio() {
   return (
     <div className="portfolio-grid">
       <PortfolioPiece

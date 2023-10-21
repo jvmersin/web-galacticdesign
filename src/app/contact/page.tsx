@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Metadata } from "next";
 import { Paper, Typography } from "@mui/material";
 import ContactForm from "@/app/components/ContactForm";
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Contact(): ReactElement {
+export default function Contact() {
   return (
     <div className="contact-wrapper">
       <Paper

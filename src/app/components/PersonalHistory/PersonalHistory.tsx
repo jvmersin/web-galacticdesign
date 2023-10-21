@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Typography } from "@mui/material";
 
 export type TPersonalHistory = {
@@ -11,7 +10,7 @@ export default function PersonalHistory({
   date,
   title,
   location,
-}: TPersonalHistory): ReactElement {
+}: TPersonalHistory) {
   return (
     <div>
       <Typography variant="caption" color="grey.500">

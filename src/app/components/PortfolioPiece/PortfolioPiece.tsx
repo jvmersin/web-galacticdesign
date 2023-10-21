@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "@/app/components/PortfolioPiece/portfolio_piece.scss";
@@ -23,7 +22,7 @@ export default function PortfolioPiece({
   website,
   reverse,
   imgClass,
-}: PortfolioPieceProps): ReactElement {
+}: PortfolioPieceProps) {
   return (
     <div className={`portfolio-piece-grid${reverse ? "-reverse" : ""}`}>
       <div className={`browser-window ${reverse ? "reverse" : ""}`}>

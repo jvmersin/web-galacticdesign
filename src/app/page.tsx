@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import dynamic from "next/dynamic";
 import { Paper, Stack, Typography } from "@mui/material";
 import { ServicesArray, TServicesData } from "@/app/data/ServicesData";
@@ -22,7 +21,7 @@ const TechImage = dynamic(() => import("@/app/components/TechImage"), {
   loading: () => <h2>Loading...</h2>,
 });
 
-export default function Home(): ReactElement {
+export default function Home() {
   return (
     <div className="home-grid">
       <Paper

@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Metadata } from "next";
 import { Divider, Paper, Typography } from "@mui/material";
 import { EducationHistory, WorkHistory } from "@/app/data/PersonalHistoryData";
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function About(): ReactElement {
+export default function About() {
   return (
     <div className="about-grid">
       <Paper component="section" variant="outlined" className="avatar">
@@ -84,7 +83,7 @@ export default function About(): ReactElement {
           Experience
         </Typography>
         {WorkHistory.map(
-          (education: TPersonalHistory, index: number): ReactElement => (
+          (education: TPersonalHistory, index: number) => (
             <>
               <PersonalHistory
                 key={index}
@@ -102,7 +101,7 @@ export default function About(): ReactElement {
           Education
         </Typography>
         {EducationHistory.map(
-          (education: TPersonalHistory, index: number): ReactElement => (
+          (education: TPersonalHistory, index: number) => (
             <>
               <PersonalHistory
                 key={index}
