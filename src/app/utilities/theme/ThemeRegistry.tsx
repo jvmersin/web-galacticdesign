@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { ReactNode } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppTheme from "@/app/utilities/theme/AppTheme";
@@ -7,7 +7,7 @@ import NextAppDirEmotionCacheProvider from "@/app/utilities/theme/EmotionCache";
 import { createTheme, responsiveFontSizes, Theme } from "@mui/material";
 
 type ThemeRegistryProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function ThemeRegistry({ children }: ThemeRegistryProps) {

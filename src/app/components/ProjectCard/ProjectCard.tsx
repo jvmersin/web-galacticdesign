@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import {

@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Skeleton } from "@mui/material";
 import "@/app/home.scss";
 

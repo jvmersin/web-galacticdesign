@@ -1,9 +1,6 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+import dynamic from "next/dynamic";
 import { Paper, Stack, Typography } from "@mui/material";
-import ProjectCard from "@/app/components/ProjectCard";
-import IconImage from "@/app/components/IconImage";
-import SocialsImage from "@/app/components/SocialsImage";
-import TechImage from "@/app/components/TechImage";
 import { ServicesArray, TServicesData } from "@/app/data/ServicesData";
 import { SocialsArray, TSocialsData } from "@/app/data/SocialsData";
 import {
@@ -11,6 +8,19 @@ import {
   TTechnologiesData,
 } from "@/app/data/TechnologiesData";
 import "@/app/home.scss";
+
+const ProjectCard = dynamic(() => import("@/app/components/ProjectCard"), {
+  loading: () => <h2>Loading...</h2>,
+});
+const IconImage = dynamic(() => import("@/app/components/IconImage"), {
+  loading: () => <h2>Loading...</h2>,
+});
+const SocialsImage = dynamic(() => import("@/app/components/SocialsImage"), {
+  loading: () => <h2>Loading...</h2>,
+});
+const TechImage = dynamic(() => import("@/app/components/TechImage"), {
+  loading: () => <h2>Loading...</h2>,
+});
 
 export default function Home(): ReactElement {
   return (
@@ -46,7 +56,7 @@ export default function Home(): ReactElement {
             cardTitle="Planet OZZI"
             cardDesc="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. As well as a variety of resources such as a custom systems cost calculator, and a custom shopping cart to request quotes for popular OZZI products."
             webUrl="https://planetozzi.com"
-            techStack={["React", "SCSS", "TypeScript", "Node.js"]}
+            techStack={["React", "SCSS", "TypeScript"]}
             hasActions={true}
           />
           <ProjectCard
@@ -55,7 +65,7 @@ export default function Home(): ReactElement {
             cardTitle="College Storage"
             cardDesc="College Storage is an online platform suite for its end-users and its administrators. The website provides a friendly interface for users to browse different services, view pricing, and sign up for seasonal storage. College Storage is accompanied by a web-based user portal for viewing and modifying storage and account information. As well as a dashboard for management to view, add, and edit new pricing, pickup locations, student accounts, and more."
             webUrl="https://collegestorage.com"
-            techStack={["React", "SCSS", "TypeScript", "ExpressJS", "MySQL"]}
+            techStack={["React", "SCSS", "TypeScript"]}
             hasActions={true}
           />
         </div>
@@ -142,7 +152,7 @@ export default function Home(): ReactElement {
                   alt={technology.alt}
                 />
               );
-            }
+            },
           )}
         </div>
       </Paper>

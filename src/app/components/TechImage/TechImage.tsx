@@ -1,5 +1,3 @@
-import React from "react";
-
 type TechImageProps = {
     image: string;
     width: number;

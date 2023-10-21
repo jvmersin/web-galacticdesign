@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, useMediaQuery } from "@mui/material";
 import DesktopNavigation from "@/app/components/Navigation/DesktopNavigation";
 import MobileNavigation from "@/app/components/Navigation/MobileNavigation";

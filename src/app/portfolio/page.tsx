@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Metadata } from "next";
 import PortfolioPiece from "@/app/components/PortfolioPiece/PortfolioPiece";
 import "@/app/portfolio/portfolio.scss";

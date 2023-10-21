@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Metadata } from "next";
 import { Paper, Typography } from "@mui/material";
 import ContactForm from "@/app/components/ContactForm";

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { Box, Button, Typography } from "@mui/material";
 import NavigationLogo from "@/app/components/Navigation/NavigationLogo";

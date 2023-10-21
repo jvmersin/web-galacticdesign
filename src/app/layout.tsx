@@ -1,4 +1,3 @@
-import * as React from "react";
 import type { Metadata } from "next";
 import Navigation from "@/app/components/Navigation/Navigation";
 import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";

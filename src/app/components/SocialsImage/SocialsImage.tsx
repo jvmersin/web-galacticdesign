@@ -1,4 +1,3 @@
-import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Button, Stack } from "@mui/material";
 

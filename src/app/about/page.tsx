@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Metadata } from "next";
 import { Divider, Paper, Typography } from "@mui/material";
 import { EducationHistory, WorkHistory } from "@/app/data/PersonalHistoryData";
@@ -92,7 +92,7 @@ export default function About(): ReactElement {
                 title={education.title}
                 location={education.location}
               />
-              {index !== WorkHistory.length - 1 && <Divider />}
+              {index !== WorkHistory.length - 1 && <Divider key={index} />}
             </>
           )
         )}
