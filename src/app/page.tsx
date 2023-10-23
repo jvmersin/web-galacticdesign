@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { Paper, Stack, Typography } from "@mui/material";
 import { ServicesArray, TServicesData } from "@/app/data/ServicesData";
 import { SocialsArray, TSocialsData } from "@/app/data/SocialsData";
@@ -28,13 +29,24 @@ export default function Home() {
         component="section"
         variant="outlined"
         className="avatar-cont"
-        sx={{ alignSelf: "start" }}
+        sx={{ position: "relative", alignSelf: "start" }}
       >
         <Typography variant="h3" align="center" padding="20px">
           Full-stack Engineer
         </Typography>
-        <img
-          className="headshot"
+        <Image
+          priority
+          width={300}
+          height={300}
+          style={{
+            width: "100%",
+            maxWidth: "300px",
+            height: "auto",
+            marginInline: "auto",
+            borderRadius: "12px",
+          }}
+          placeholder="blur"
+          blurDataURL="https://cdn.galacticdesign.io/images/headshots/headshot_03.webp"
           src="https://cdn.galacticdesign.io/images/headshots/headshot_03.webp"
           alt="James Ehrenberg Headshot"
         />

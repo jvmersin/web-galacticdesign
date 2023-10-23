@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Stack, Typography } from "@mui/material";
 
 type IconImageProps = {
@@ -15,13 +16,18 @@ export default function IconImage({
 }: IconImageProps) {
   return (
     <Stack alignItems="center">
-      <img
+      <Image
+        width={50}
+        height={50}
         style={{
           filter: "invert(100%)",
           width: `${width}px`,
           height: "auto",
           marginBottom: "20px",
         }}
+        priority={false}
+        placeholder="blur"
+        blurDataURL={image}
         src={image}
         alt={alt}
       />

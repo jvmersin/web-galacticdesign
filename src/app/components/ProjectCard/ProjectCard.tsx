@@ -1,6 +1,4 @@
-"use client";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import {
   Button,
   Card,
@@ -18,7 +16,6 @@ type ProjectCardProps = {
   cardDesc: string;
   techStack: string[];
   hasActions: boolean;
-  gitHub?: string;
   webUrl?: string;
 };
 
@@ -29,7 +26,6 @@ export default function ProjectCard({
   cardDesc,
   techStack,
   hasActions,
-  gitHub,
   webUrl,
 }: ProjectCardProps) {
   return (
@@ -50,16 +46,6 @@ export default function ProjectCard({
       </CardContent>
       {hasActions && (
         <CardActions>
-          {gitHub && (
-            <Button
-              href={gitHub ?? ""}
-              color="secondary"
-              target="_blank"
-              startIcon={<GitHubIcon />}
-            >
-              Code
-            </Button>
-          )}
           {webUrl && (
             <Button
               href={webUrl ?? ""}

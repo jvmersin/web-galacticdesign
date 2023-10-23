@@ -1,3 +1,4 @@
+import Image from "next/image";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Button, Stack } from "@mui/material";
 
@@ -18,13 +19,18 @@ export default function SocialsImage({
 }: IconImageProps) {
   return (
     <Stack alignItems="center">
-      <img
+      <Image
+        width={50}
+        height={50}
         style={{
           filter: "invert(100%)",
           width: `${width}px`,
           height: "auto",
           marginBottom: "20px",
         }}
+        priority={false}
+        placeholder="blur"
+        blurDataURL={image}
         src={image}
         alt={alt}
       />

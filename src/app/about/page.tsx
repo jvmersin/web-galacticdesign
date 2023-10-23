@@ -10,6 +10,7 @@ import {
   TTechnologiesData,
 } from "@/app/data/TechnologiesData";
 import "@/app/about/about.scss";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Galactic Design | About",
@@ -37,8 +38,16 @@ export default function About() {
   return (
     <div className="about-grid">
       <Paper component="section" variant="outlined" className="avatar">
-        <img
-          className="headshot"
+        <Image
+          width={300}
+          height={300}
+          style={{
+            width: "100%",
+            maxWidth: "300px",
+            height: "auto",
+            marginInline: "auto",
+            borderRadius: "12px",
+          }}
           src="https://cdn.galacticdesign.io/images/headshots/headshot_01.jpg"
           alt="James Ehrenberg Headshot"
         />
@@ -82,37 +91,33 @@ export default function About() {
         <Typography variant="h4" gutterBottom>
           Experience
         </Typography>
-        {WorkHistory.map(
-          (education: TPersonalHistory, index: number) => (
-            <>
-              <PersonalHistory
-                key={index}
-                date={education.date}
-                title={education.title}
-                location={education.location}
-              />
-              {index !== WorkHistory.length - 1 && <Divider key={index} />}
-            </>
-          )
-        )}
+        {WorkHistory.map((education: TPersonalHistory, index: number) => (
+          <>
+            <PersonalHistory
+              key={index}
+              date={education.date}
+              title={education.title}
+              location={education.location}
+            />
+            {index !== WorkHistory.length - 1 && <Divider key={index} />}
+          </>
+        ))}
       </Paper>
       <Paper component="section" variant="outlined" className="education">
         <Typography variant="h4" gutterBottom>
           Education
         </Typography>
-        {EducationHistory.map(
-          (education: TPersonalHistory, index: number) => (
-            <>
-              <PersonalHistory
-                key={index}
-                date={education.date}
-                title={education.title}
-                location={education.location}
-              />
-              {index !== EducationHistory.length - 1 && <Divider />}
-            </>
-          )
-        )}
+        {EducationHistory.map((education: TPersonalHistory, index: number) => (
+          <>
+            <PersonalHistory
+              key={index}
+              date={education.date}
+              title={education.title}
+              location={education.location}
+            />
+            {index !== EducationHistory.length - 1 && <Divider />}
+          </>
+        ))}
       </Paper>
       <Paper component="section" variant="outlined" className="skills">
         <Typography variant="h4" gutterBottom>
@@ -127,7 +132,7 @@ export default function About() {
                 width={technology.width}
                 alt={technology.alt}
               />
-            )
+            ),
           )}
         </div>
       </Paper>
