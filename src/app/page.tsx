@@ -1,24 +1,24 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Paper, Stack, Typography } from "@mui/material";
-import { ServicesArray, TServicesData } from "@/app/data/ServicesData";
-import { SocialsArray, TSocialsData } from "@/app/data/SocialsData";
+import { ServicesArray, TServicesData } from "@/data/ServicesData";
+import { SocialsArray, TSocialsData } from "@/data/SocialsData";
 import {
   TechnologiesArray,
   TTechnologiesData,
-} from "@/app/data/TechnologiesData";
+} from "@/data/TechnologiesData";
 import "@/app/home.scss";
 
-const ProjectCard = dynamic(() => import("@/app/components/ProjectCard"), {
+const ProjectCard = dynamic(() => import("@/components/ProjectCard"), {
   loading: () => <h2>Loading...</h2>,
 });
-const IconImage = dynamic(() => import("@/app/components/IconImage"), {
+const IconImage = dynamic(() => import("@/components/IconImage"), {
   loading: () => <h2>Loading...</h2>,
 });
-const SocialsImage = dynamic(() => import("@/app/components/SocialsImage"), {
+const SocialsImage = dynamic(() => import("@/components/SocialsImage"), {
   loading: () => <h2>Loading...</h2>,
 });
-const TechImage = dynamic(() => import("@/app/components/TechImage"), {
+const TechImage = dynamic(() => import("@/components/TechImage"), {
   loading: () => <h2>Loading...</h2>,
 });
 
@@ -46,8 +46,8 @@ export default function Home() {
             borderRadius: "12px",
           }}
           placeholder="blur"
-          blurDataURL="https://cdn.galacticdesign.io/images/headshots/headshot_03.webp"
-          src="https://cdn.galacticdesign.io/images/headshots/headshot_03.webp"
+          blurDataURL="/images/headshots/headshot_03.webp"
+          src="/images/headshots/headshot_03.webp"
           alt="James Ehrenberg Headshot"
         />
         <Typography padding="20px 10px">
@@ -62,7 +62,7 @@ export default function Home() {
         </Typography>
         <div className="project-card-grid">
           <ProjectCard
-            imageSrc="https://cdn.galacticdesign.io/images/projects/planet-ozzi/site-planet-ozzi-thumb.webp"
+            imageSrc="/images/projects/planet-ozzi/site-planet-ozzi-thumb.webp"
             imgTitle="Planet OZZI Website Landing"
             cardTitle="Planet OZZI"
             cardDesc="Planet OZZI is an online platform that allows users to browse OZZI's catalog of products and solutions for reusable containers. The website provides an interface for users to view information on how the OZZI system works, the large footprint OZZI has accross different industries both inside and outside the USA. As well as a variety of resources such as a custom systems cost calculator, and a custom shopping cart to request quotes for popular OZZI products."
@@ -71,7 +71,7 @@ export default function Home() {
             hasActions={true}
           />
           <ProjectCard
-            imageSrc="https://cdn.galacticdesign.io/images/projects/college-storage/site-cs-thumb.webp"
+            imageSrc="/images/projects/college-storage/site-cs-thumb.webp"
             imgTitle="College Storage Website Landing"
             cardTitle="College Storage"
             cardDesc="College Storage is an online platform suite for its end-users and its administrators. The website provides a friendly interface for users to browse different services, view pricing, and sign up for seasonal storage. College Storage is accompanied by a web-based user portal for viewing and modifying storage and account information. As well as a dashboard for management to view, add, and edit new pricing, pickup locations, student accounts, and more."

@@ -1,11 +1,12 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
-import Navigation from "@/app/components/Navigation/Navigation";
-import ThemeRegistry from "@/app/utilities/theme/ThemeRegistry";
-import Footer from "@/app/components/Footer";
+import Navigation from "@/components/Navigation/Navigation";
+import ThemeRegistry from "@/utilities/theme/ThemeRegistry";
+import Footer from "@/components/Footer";
 import "@/app/index.scss";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cdn.galacticdesign.io"),
+  metadataBase: new URL("https://www.galacticdesign.io"),
   title: "Galactic Design",
   description:
     "Galactic Design is a one stop shop for full stack web development, software engineering, web and technology consulting, and more!",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {

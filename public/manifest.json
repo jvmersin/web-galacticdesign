@@ -3,17 +3,17 @@
   "name": "Galactic Design",
   "icons": [
     {
-      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-16x16.png",
+      "src": "/images/favicon/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-192x192.png",
+      "src": "/images/favicon/favicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://cdn.galacticdesign.io/images/favicon/favicon-512x512.png",
+      "src": "/images/favicon/favicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

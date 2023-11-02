@@ -1,14 +1,11 @@
 import { Metadata } from "next";
 import { Divider, Paper, Typography } from "@mui/material";
-import { EducationHistory, WorkHistory } from "@/app/data/PersonalHistoryData";
-import TechImage from "@/app/components/TechImage";
+import { EducationHistory, WorkHistory } from "@/data/PersonalHistoryData";
+import TechImage from "@/components/TechImage";
 import PersonalHistory, {
   TPersonalHistory,
-} from "@/app/components/PersonalHistory/PersonalHistory";
-import {
-  TechnologiesArray,
-  TTechnologiesData,
-} from "@/app/data/TechnologiesData";
+} from "@/components/PersonalHistory";
+import { TechnologiesArray, TTechnologiesData } from "@/data/TechnologiesData";
 import "@/app/about/about.scss";
 import Image from "next/image";
 
@@ -39,6 +36,7 @@ export default function About() {
     <div className="about-grid">
       <Paper component="section" variant="outlined" className="avatar">
         <Image
+          priority
           width={300}
           height={300}
           style={{
@@ -48,7 +46,9 @@ export default function About() {
             marginInline: "auto",
             borderRadius: "12px",
           }}
-          src="https://cdn.galacticdesign.io/images/headshots/headshot_01.jpg"
+          placeholder="blur"
+          blurDataURL="/images/headshots/headshot_03.webp"
+          src="/images/headshots/headshot_01.webp"
           alt="James Ehrenberg Headshot"
         />
       </Paper>

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Paper, Typography } from "@mui/material";
-import ContactForm from "@/app/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import "@/app/contact/contact.scss";
 
 export const metadata: Metadata = {
