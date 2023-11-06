@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Dispatch, ReactElement, SetStateAction } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { Menu } from "@mui/icons-material";
-import NavigationLogo from "@/components/Navigation/NavigationLogo";
 import classes from "@/components/Navigation/navigation.module.scss";
+import Image from "next/image";
 
 type NavigationBarProps = {
   handleOpen: Dispatch<SetStateAction<boolean>>;
@@ -15,7 +15,20 @@ export default function NavigationBar({
   return (
     <Box className={classes["nav-bar-grid"]}>
       <Box className={classes["nav-company-header"]}>
-        <NavigationLogo />
+        <Image
+          priority
+          width={70}
+          height={70}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "70px",
+          }}
+          placeholder="blur"
+          blurDataURL="/images/logo/logo.svg"
+          src="/images/logo/logo.svg"
+          alt="Minimilast Planet"
+        />
         <Typography variant="h5" whiteSpace="nowrap">
           Galactic Design
         </Typography>
