@@ -1,21 +1,15 @@
 "use client";
-import { useState } from "react";
-import { Box, useMediaQuery } from "@mui/material";
-import DesktopNavigation from "@/components/Navigation/DesktopNavigation";
-import MobileNavigation from "@/components/Navigation/MobileNavigation";
+import { ReactElement, useState } from "react";
+import { Box } from "@mui/material";
+import NavigationBar from "@/components/Navigation/NavigationBar";
 import NavigationDrawer from "@/components/Navigation/NavigationDrawer";
 
-export default function Navigation() {
-  const isDesktop: boolean = useMediaQuery("(min-width: 1200px)");
+export default function Navigation(): ReactElement {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
   return (
-    <Box component="header">
-      {!isDesktop ? (
-        <MobileNavigation handleOpen={setDrawerOpen} />
-      ) : (
-        <DesktopNavigation />
-      )}
+    <Box>
+      <NavigationBar handleOpen={setDrawerOpen} />
       <NavigationDrawer open={drawerOpen} handleClose={setDrawerOpen} />
     </Box>
   );

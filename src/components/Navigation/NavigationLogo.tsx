@@ -10,7 +10,6 @@ export default function NavigationLogo() {
         width: "100%",
         height: "auto",
         maxWidth: "100px",
-        margin: "0 30px",
       }}
       placeholder="blur"
       blurDataURL="/images/logo/logo.svg"

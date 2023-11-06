@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
   Divider,
@@ -9,19 +10,19 @@ import {
   ListItemText,
   ListSubheader,
 } from "@mui/material";
-import {usePathname} from "next/navigation";
 
 type NavigationDrawerProps = {
   open: boolean;
   handleClose: Dispatch<SetStateAction<boolean>>;
 };
+
 export default function NavigationDrawer({
   open,
   handleClose,
 }: NavigationDrawerProps) {
   const pathname = usePathname();
   return (
-    <Drawer anchor="left" open={open} onClose={() => handleClose(false)}>
+    <Drawer anchor="right" open={open} onClose={() => handleClose(false)}>
       <List
         component="nav"
         subheader={
