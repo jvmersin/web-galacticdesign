@@ -81,7 +81,7 @@ export default function ContactForm() {
     setDisabled(true);
     if (validateForm()) {
       enqueueSnackbar("It's on it's way, hang tight!", { variant: "info" });
-      fetch("/contact", {
+      fetch("https://galacticdesign/api/galactic-design/contact", {
         method: "POST",
         body: JSON.stringify({
           name: name,
